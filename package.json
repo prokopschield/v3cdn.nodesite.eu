@@ -1,0 +1,20 @@
+{
+    "name": "v3cdn.nodesite.eu",
+    "description": "NodeSite CDN v3",
+    "version": "0.0.0",
+    "main": "lib/index.js",
+    "bin": {
+        "v3cdn.nodesite.eu": "lib/cli.js"
+    },
+    "author": "Prokop Schield",
+    "dependencies": {
+        "@prokopschield/base64": "^0.1.0-1",
+        "doge-json": "^1.2.11",
+        "nsblob-stream": "^0.1.6"
+    },
+    "devDependencies": {
+        "@types/node": ">=16"
+    },
+    "keywords": [],
+    "license": "GPL-3.0-or-later"
+}
