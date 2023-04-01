@@ -32,9 +32,7 @@
                     console.log(`${file.name} -> ${file.hash}`);
                     document.getElementById("files").innerHTML += `
 <li class="text-2xl text-sky-400 underline">
-  <a href="https://v3cdn.nodesite.eu/${hash}/${file.name}"
-    >https://v3cdn.nodesite.eu/${hash}/${file.name}</a
-  >
+  <a href="https://v3cdn.nodesite.eu/${hash}/${file.name}">${file.name}</a>
 </li>
 `;
                 }
