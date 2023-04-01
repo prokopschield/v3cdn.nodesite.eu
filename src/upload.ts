@@ -5,7 +5,7 @@ import fs from "fs";
 import { contentType } from "mime-types";
 import { Source } from "nsblob-native-stream";
 import path from "path";
-import { Queue } from "ps-std";
+import { Queue, shellEscape } from "ps-std";
 
 import type { FileSource } from "./types";
 
@@ -28,7 +28,7 @@ export async function uploadFile(file: string) {
 
     const type =
         contentType(name) ||
-        execSync(`file --mime ${file}`)
+        execSync(`file --mime ${shellEscape(file)}`)
             .toString()
             .trim()
             .split(/[ \;\:]+/g)[1] ||
