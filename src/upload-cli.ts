@@ -6,7 +6,7 @@ upload(...process.argv.slice(2))
     .then(console.log)
     .then(() => socket.close())
     .then(() => {
-        if (process.argv[1].includes("v3cdn-upload")) {
+        if (process.argv[1].includes("v3cdn")) {
             process.exit(0);
         }
     });

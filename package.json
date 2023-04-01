@@ -1,14 +1,17 @@
 {
     "name": "v3cdn.nodesite.eu",
     "description": "NodeSite CDN v3",
-    "version": "0.1.0-3",
+    "version": "0.1.0-4",
     "main": "lib/index.js",
     "bin": {
+        "v3cdn-server": "lib/server-cli.js",
         "v3cdn-upload": "lib/upload-cli.js",
+        "v3cdn": "lib/cli.js",
         "v3cdn.nodesite.eu": "lib/cli.js"
     },
     "author": "Prokop Schield",
     "dependencies": {
+        "@prokopschield/argv": "^0.1.3",
         "@prokopschield/base64": "^0.1.0-1",
         "doge-json": "^1.2.11",
         "mime-types": "^2.1.35",

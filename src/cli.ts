@@ -1,5 +1,15 @@
-#!/usr/bin/env node
+import argv from "@prokopschield/argv";
 
-import { main } from ".";
+argv.alias("port", "p").alias("server", "s");
 
-main(Number(process.env.port) || 21212);
+if (argv.get("port") || argv.get("server")) {
+    const port = argv.get("port");
+
+    if (Number(port)) {
+        process.env.port = port;
+    }
+
+    require("./server-cli");
+} else {
+    require("./upload-cli");
+}
