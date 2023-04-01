@@ -1,10 +1,10 @@
 {
     "name": "v3cdn.nodesite.eu",
     "description": "NodeSite CDN v3",
-    "version": "0.1.0-1",
+    "version": "0.1.0-2",
     "main": "lib/index.js",
     "bin": {
-        "v3cdn-upload": "lib/upload-cli",
+        "v3cdn-upload": "lib/upload-cli.js",
         "v3cdn.nodesite.eu": "lib/cli.js"
     },
     "author": "Prokop Schield",
