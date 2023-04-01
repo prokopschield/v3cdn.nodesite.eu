@@ -1,8 +1,9 @@
 import * as Base64 from "@prokopschield/base64";
 import Json from "doge-json";
 import http from "http";
-import { saturate, Source } from "nsblob-stream";
+import { saturate, Source } from "nsblob-native-stream";
 import type { Readable } from "stream";
+
 import { get_homepage } from "./homepage";
 import { FileSource } from "./types";
 

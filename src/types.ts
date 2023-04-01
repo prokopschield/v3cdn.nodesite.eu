@@ -1,4 +1,4 @@
-import { Source } from "nsblob-stream";
+import type { Source } from "nsblob-native-stream";
 
 export type File = {
     name: string;

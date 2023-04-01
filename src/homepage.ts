@@ -1,5 +1,5 @@
 import fs from "fs";
-import { Source } from "nsblob-stream";
+import { Source } from "nsblob-native-stream";
 import path from "path";
 
 export async function get_homepage() {
