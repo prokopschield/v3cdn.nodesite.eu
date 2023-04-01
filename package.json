@@ -1,7 +1,7 @@
 {
     "name": "v3cdn.nodesite.eu",
     "description": "NodeSite CDN v3",
-    "version": "0.1.0-2",
+    "version": "0.1.0-3",
     "main": "lib/index.js",
     "bin": {
         "v3cdn-upload": "lib/upload-cli.js",
@@ -12,8 +12,8 @@
         "@prokopschield/base64": "^0.1.0-1",
         "doge-json": "^1.2.11",
         "mime-types": "^2.1.35",
-        "nsblob-native-stream": "^0.1.6-1",
-        "ps-std": "^0.1.6"
+        "nsblob-native-stream": "^0.1.7",
+        "ps-std": "^0.1.8"
     },
     "devDependencies": {
         "@types/mime-types": "^2.1.1",
