@@ -16,7 +16,7 @@
         "doge-json": "^1.2.11",
         "mime-types": "^2.1.35",
         "nsblob-native-stream": "^0.1.7",
-        "ps-std": "^0.1.8"
+        "ps-std": "^0.1.9"
     },
     "devDependencies": {
         "@types/mime-types": "^2.1.1",
