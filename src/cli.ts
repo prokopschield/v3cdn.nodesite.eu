@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import argv from "@prokopschield/argv";
 
 argv.alias("port", "p").alias("server", "s");

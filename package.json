@@ -1,7 +1,7 @@
 {
     "name": "v3cdn.nodesite.eu",
     "description": "NodeSite CDN v3",
-    "version": "0.1.0-5",
+    "version": "0.1.0-6",
     "main": "lib/index.js",
     "bin": {
         "v3cdn-server": "lib/server-cli.js",

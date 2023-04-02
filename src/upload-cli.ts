@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { socket } from "nsblob-native-stream";
 
 import { upload } from "./upload";
