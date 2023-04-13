@@ -35,6 +35,7 @@ export function applyBoringHeaders(
 ) {
     applyCorsHeaders(response);
 
+    response.setHeader("Accept-Ranges", "bytes");
     response.setHeader("Cache-Control", "public, max-age=604800, immutable");
 
     const date = new Date(source.props.date);
