@@ -159,7 +159,7 @@ export async function listener(
                         `bytes ${first}-${last}/${source.length}`
                     );
 
-                    response.setHeader("Content-Length", source.length);
+                    response.setHeader("Content-Length", last - first + 1);
 
                     applyBoringHeaders(response, source);
 
