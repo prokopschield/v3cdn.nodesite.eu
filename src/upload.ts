@@ -114,3 +114,69 @@ export async function upload(...files: string[]): Promise<string> {
         );
     }
 }
+
+/**
+ * Uploads a Buffer to v3cdn.
+ * @param buffer the buffer to upload
+ * @param type the buffer's MIME type
+ * @param props additional properties to store
+ * @returns a v3cdn url
+ */
+export async function upload_buffer(
+    buffer: Buffer,
+    type: string = "text/plain",
+    props: Record<string, string> = { type }
+): Promise<string> {
+    const source = await Source.fromBuffer(buffer, props);
+
+    if (!source.props.type) {
+        await source.update({ type });
+    }
+
+    return sourceToUrl(source);
+}
+
+/**
+ * Uploads a string to v3cdn.
+ * @param string the string to upload
+ * @param type the buffer's MIME type
+ * @param props additional properties to store
+ * @returns a v3cdn url
+ */
+export async function upload_string(
+    string: string,
+    type: string = "text/plain",
+    props: Record<string, string> = { type }
+) {
+    return upload_buffer(Buffer.from(string), type, props);
+}
+
+/**
+ * Uploads a Stream to v3cdn.
+ * @param stream the stream to upload
+ * @param type the buffer's MIME type
+ * @param props additional properties to store
+ * @returns a v3cdn url
+ */
+export async function upload_stream(
+    stream: NodeJS.ReadableStream,
+    type: string = "text/plain",
+    props: Record<string, string> = { type }
+): Promise<string> {
+    const source = await Source.fromStream(stream, props);
+
+    if (!source.props.type) {
+        await source.update({ type });
+    }
+
+    return sourceToUrl(source);
+}
+
+/**
+ * Uploads a Source to v3cdn.
+ * @param source the Source to upload
+ * @returns a v3cdn url
+ */
+export async function upload_source(source: Source<any>): Promise<string> {
+    return sourceToUrl(source);
+}
