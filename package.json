@@ -1,7 +1,7 @@
 {
     "name": "v3cdn.nodesite.eu",
     "description": "NodeSite CDN v3",
-    "version": "0.1.0-8",
+    "version": "0.1.0-9",
     "main": "lib/index.js",
     "bin": {
         "v3cdn-server": "lib/server-cli.js",
@@ -12,11 +12,11 @@
     "author": "Prokop Schield",
     "dependencies": {
         "@prokopschield/argv": "^0.1.3",
-        "@prokopschield/base64": "^0.1.0-1",
-        "doge-json": "^1.2.11",
+        "@prokopschield/base64": "^0.1.0-2",
+        "doge-json": "^1.2.14",
         "mime-types": "^2.1.35",
-        "nsblob-native-stream": "^0.1.9",
-        "ps-std": "^0.1.9"
+        "nsblob-native-stream": "^0.1.11",
+        "ps-std": "^0.1.55"
     },
     "devDependencies": {
         "@types/mime-types": "^2.1.1",
